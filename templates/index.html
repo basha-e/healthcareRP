@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-Healthy</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Opening Banner -->
+    <div id="opening-banner" class="banner">
+        <h1>Welcome to B-Healthy</h1>
+        <br>
+        <p>Your journey to better health starts here with B-Healthy</p>
+    </div>
+
+    <!-- Role Selection Modal -->
+    <div id="role-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Select Your Role</h2>
+            <button id="patient-btn" class="role-btn">Patient</button>
+            <button id="doctor-btn" class="role-btn" disabled>Doctor</button>
+            <p class="note">Doctor interface is not done yet</p>
+        </div>
+    </div>
+    <!-- Header (Displayed after role selection) -->
+    <header class="header hidden" id="main-header">
+        <h1>B-Healthy</h1>
+        <p>Your Health Monitoring Partner</p>
+        <button id="change-role-btn" class="role-btn">Change Role</button>
+    </header>
+
+   
+    <main class="main-content hidden" id="main-content">
+         <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="/static/logo.png" alt="B-Healthy Logo" class="logo">
+            <p>Your Health, Our Priority</p>
+        </div>
+    
+        <br>
+        <br>
+
+
+        <section class="sensor-section">
+            <h2>Sensors Data</h2>
+            <div class="sensor-data">
+                <div class="sensor-card">
+                    <p>Blood Pressure</p>
+                    <div class="meter-container">
+                        <meter id="bp-meter" min="0" max="200" value="0"></meter>
+                    </div>
+                    <span id="bp">Loading...</span>
+                    <p id="bp-condition" class="condition">Loading...</p>
+                </div>
+                <div class="sensor-card">
+                    <p>Heart Rate</p>
+                    <div class="meter-container">
+                        <meter id="hr-meter" min="40" max="180" value="0"></meter>
+                    </div>
+                    <span id="hr">Loading...</span>
+                    <p id="hr-condition" class="condition">Loading...</p>
+                </div>
+                <div class="sensor-card">
+                    <p>Temperature</p>
+                    <div class="meter-container">
+                        <meter id="temp-meter" min="90" max="110" value="0"></meter>
+                    </div>
+                    <span id="temp">Loading...</span>
+                    <p id="temp-condition" class="condition">Loading...</p>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+
+        <br>
+
+        <!-- Communication Section -->
+        <div class="communication-section">
+            <h3>Need to Talk to Your Doctor?</h3>
+            <button id="communicate-doctor-btn" class="role-btn">Msg Doctor</button>
+        </div>
+    </main>
+    <footer class="footer hidden" id="main-footer">
+        <p>&copy; 2024 B-Healthy. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
